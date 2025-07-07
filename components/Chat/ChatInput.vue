@@ -22,8 +22,7 @@ const togglePosition = async (): Promise<void> => {
 
 // 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
 
-const API_KEY =
-	'Bearer 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'
+const API_KEY = `Bearer ${import.meta.env.VITE_OPENROUTER_API_KEY}`
 
 const fetchData = async () => {
 	try {
@@ -95,6 +94,11 @@ const fetchData = async () => {
 	max-width: 748px;
 	height: 56px;
 	margin: 0 auto;
+	color: #f8faff;
+	&::placeholder {
+		color: #f8faff;
+		opacity: 0.7;
+	}
 }
 
 .control {
